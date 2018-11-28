@@ -1,0 +1,28 @@
+.list-store {
+    width: 50%;
+    float: right;
+}
+
+.description-item {
+    color: #fff;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    margin: 15px 0;
+}
+
+.description-item.-title {
+    margin-bottom: 100px;
+}
+
+.description-item.-text {
+    margin-top: 70px;
+}
+
+.description-item.-link {
+    margin-top: 40px;
+}
+
+.description-item.-link a {
+    color: #fff;
+    text-decoration: none;
+}

@@ -1,5 +1,7 @@
 .button-store {
+    margin-top: 100px;
     display: inline-block;
+    box-sizing: border-box;
     width: 200px;
     height: 60px;
     background-color: #252c41;
@@ -9,4 +11,13 @@
     text-align: center;
     color: #fff;
     text-decoration: none;
+}
+
+.button-store.-second {
+    float: left;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: 218px;
+    line-height: 56px;
+    margin-right: 40px;
 }
