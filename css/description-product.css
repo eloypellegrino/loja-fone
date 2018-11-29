@@ -1,11 +1,19 @@
 .description-product {
     color: #fff;
     font-family: Roboto, sans-serif;
+    margin-bottom: 90px;
 }
 
 .description-product>.title {
     font-size: 25px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.description-product>.stars img {
+    width: 25px;
+    height: 24px;
+    margin-bottom: 25px;
+
 }
 
 .description-product>.item {
