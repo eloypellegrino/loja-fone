@@ -10,6 +10,7 @@
     font-family: Arial, Roboto, sans-serif;
     float: left;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .header-store>.navigation {
@@ -18,28 +19,50 @@
     float: right;
 }
 
-.header-store>.navigation>.search {
+.header-store [type="search"] {
     width: 360px;
-    margin-right: 60px;
+    margin-right: 65px;
     background-color: transparent;
-    border: 0 solid #fff;
+    border: none;
     border-bottom: 1px solid #fff;
-    height: 24px;
-    padding: 0 0 4px 4px;
+    padding: 8px;
+    color: inherit;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
 }
 
-.header-store>.navigation>.search::placeholder {
+.header-store [type="search"]::placeholder {
     color: #fff;
     font-size: 20px;
-
 }
 
 .header-store .action {
     text-decoration: none;
     color: #fff;
     margin-right: 60px;
+    position: relative;
+    display: inline-block;
 }
 
 .header-store .action.-last {
     margin-right: 0;
+}
+
+.header-store .action:after {
+    content: '';
+    width: 0px;
+    position: absolute;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #fff;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+}
+
+.header-store .action:hover:after {
+    width: 100%;
+    left: 0;
+    background: #fff;
 }
