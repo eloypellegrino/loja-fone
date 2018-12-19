@@ -25,7 +25,7 @@
                 <input type="search" placeholder="Busca">
                 <a class="action" href="#">Produtos</a>
                 <a class="action" href="#">Serviço</a>
-                <a id="cartButton" class="action -last" href="#">Carrinho(10)</a>
+                <a class="action -last" href="#">Carrinho(10)</a>
             </nav>
         </header>
 
@@ -35,13 +35,33 @@
         <section class="wrap-product">
             <dl class="description-product">
                 <dt class="title">Fone top, feliz e caro</dt>
-                <dd class="item -heart"><img class="icon" src="image/heart.png" alt="Like"></dd>
+                <dd class="item -heart">
+                    <img class="icon" src="image/heart.png" alt="Like">
+                    <img class="icon -active" src="image/heart-active.png" alt="Like">
+                </dd>
                 <dd class="item -star">
-                    <img class="icon" src="image/star-active.png" alt="Estrela">
-                    <img class="icon" src="image/star-active.png" alt="Estrela">
-                    <img class="icon" src="image/star-active.png" alt="Estrela">
-                    <img class="icon" src="image/star-active.png" alt="Estrela">
-                    <img class="icon" src="image/star.png" alt="Estrela">
+                    <ol>
+                        <li class="star">
+                            <img class="icon" src="image/star.png" alt="Estrela">
+                            <img class="icon -active" src="image/star-active.png" alt="Estrela">
+                        </li>
+                        <li class="star">
+                            <img class="icon" src="image/star.png" alt="Estrela">
+                            <img class="icon -active" src="image/star-active.png" alt="Estrela">
+                        </li>
+                        <li class="star">
+                            <img class="icon" src="image/star.png" alt="Estrela">
+                            <img class="icon -active" src="image/star-active.png" alt="Estrela">
+                        </li>
+                        <li class="star">
+                            <img class="icon" src="image/star.png" alt="Estrela">
+                            <img class="icon -active" src="image/star-active.png" alt="Estrela">
+                        </li>
+                        <li class="star">
+                            <img class="icon" src="image/star.png" alt="Estrela">
+                            <img class="icon -active" src="image/star-active.png" alt="Estrela">
+                        </li>
+                    </ol>
                 </dd>
                 <dd class="item">4.0 (97)</dd>
                 <dd class="item -info"><strong class="contrast">Frete</strong> C$ 108</dd>
@@ -63,6 +83,7 @@
 
     </div>
     <script src="js/description-project.js"></script>
+    <script src="js/home.js"></script>
 </body>
 
 </html>

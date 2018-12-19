@@ -1,13 +1,12 @@
-const $heart = window.document.querySelector(".-heart");
-const $cartButton = window.document.querySelector(".-second");
+const $heart = document.querySelector(".-heart");
+const $stars = document.querySelectorAll(".star");
 
 $heart.addEventListener("click", handleClick);
-$cartButton.addEventListener("click", insertText);
 
-function handleClick () {
-    console.log("ae");
-}
+$stars.forEach(function ($star) {
+    $star.addEventListener("click", handleClick);
+});
 
-function insertText() {
-    document.getElementById("cartButton").innerHTML = "Carrinho(11)";
+function handleClick() {
+    this.classList.toggle("-active");
 }
