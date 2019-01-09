@@ -1,6 +1,8 @@
 const $search = document.querySelector("[type=search]");
 const $searchBtn = document.querySelector(".fa-search");
 const $searchBtnClose = document.querySelector(".fa-times");
+const $menuMobile = document.querySelector(".menu i");
+const $menuMobileList = document.querySelector(".list");
 
 function searchClick() {
     $search.classList.toggle("-active");
@@ -10,21 +12,15 @@ function searchClick() {
     $searchBtnClose.classList.toggle("-hidden");
 };
 
-$searchBtn.addEventListener("click", searchClick);
-$searchBtnClose.addEventListener("click", searchClick);
-
-const $mobileMenu = document.querySelector(".mobileMenu");
-const $navMenu = document.querySelectorAll(".header-store .action");
-
-function openMenu() {
-    $navMenu.forEach(element => {
-        if (element.style.display == "none") {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
-    })
-
+function menuClick() {
+    if ($menuMobile.classList.contains("fa-bars")) {
+        $menuMobile.classList.replace("fa-bars", "fa-times");
+    } else {
+        $menuMobile.classList.replace("fa-times", "fa-bars");
+    }
+    $menuMobileList.classList.toggle("-active");
 }
 
-$mobileMenu.addEventListener("click", openMenu);
+$searchBtn.addEventListener("click", searchClick);
+$searchBtnClose.addEventListener("click", searchClick);
+$menuMobile.addEventListener("click", menuClick);

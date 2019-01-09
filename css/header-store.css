@@ -16,7 +16,9 @@
 .header-store>.navigation {
     font-size: 21px;
     font-family: "Segoe UI", Roboto, sans-serif;
-    float: right;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .header-store [type="search"] {
@@ -36,19 +38,26 @@
     font-size: 20px;
 }
 
-.header-store .action {
-    text-decoration: none;
-    color: #fff;
-    margin-right: 60px;
-    position: relative;
+.header-store .item {
     display: inline-block;
+    margin-right: 60px;
 }
 
-.header-store .action.-last {
+.header-store .item.-menu {
+    display: none;
+}
+
+.header-store .item.-last {
     margin-right: 0;
 }
 
-.header-store .action:after {
+.header-store .action {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.header-store .action::after {
     content: '';
     width: 0px;
     left: 0;
@@ -60,7 +69,7 @@
     transition: all .2s ease;
 }
 
-.header-store .action:hover:after {
+.header-store .action:hover::after {
     width: 100%;
 }
 
@@ -70,7 +79,7 @@
     visibility: hidden;
 }
 
-.fa-bars @media (max-width: 1310px) {
+@media (max-width: 1310px) {
     .header-store {
         margin-bottom: 60px;
     }
@@ -85,8 +94,9 @@
     }
 
     .header-store>.navigation {
-        float: none;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -100,14 +110,16 @@
         border-left: solid 40px #fff;
         color: #000;
         transition: transform 200ms linear;
-        border-bottom-right-radius: 10px;
+        border-radius: 0 0 5px 0;
         box-sizing: border-box;
         padding-right: 60px;
+        margin-top: 0;
     }
 
     .header-store .-active[type="search"] {
         transform: translateX(-30px);
         transition: transform 350ms cubic-bezier(.39, .41, .28, 1.26);
+        border-radius: 0 0 5px 0;
     }
 
     .header-store [type="search"]::placeholder {
@@ -123,16 +135,17 @@
         visibility: visible;
         color: #252525;
         position: absolute;
-        top: 8px;
-        left: 10px;
+        top: 0px;
+        left: 0px;
         transition: transform 200ms linear;
         cursor: pointer;
+        padding: 10px;
     }
 
     .fa-search.-active,
     .fa-times.-active {
         transition: transform 350ms cubic-bezier(.39, .41, .28, 1.26);
-        transform: translateX(280px);
+        transform: translateX(290px);
 
     }
 
@@ -147,13 +160,13 @@
         padding: 0 16px;
     }
 
-    .header-store>.navigation {
+    .header-store .list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
-    .header-store .action {
-        margin-right: 0;
+    .header-store .item {
+        margin-right: 20px;
     }
 
     .header-store [type="search"] {
@@ -166,7 +179,7 @@
     }
 
     .fa-times {
-        left: -90px;
+        left: -110px;
     }
 
     .fa-search.-active {
@@ -174,24 +187,65 @@
     }
 }
 
-@media (max-width: 335px) {
+@media (max-width: 380px) {
     .header-store {
         margin-bottom: 40px;
-    }
-
-    .header-store .action {
-        display: none;
     }
 
     .fa-bars {
         visibility: visible;
     }
 
-    .mobileMenu {
-        top: 8px;
-        right: 10px;
+    .header-store .item.-menu {
+        display: block;
+    }
+
+    .header-store .item.-menu i {
+        color: #252525;
         position: absolute;
-        cursor: pointer;
+        top: 0px;
+        left: 0px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 0 0 0 5px;
+        transform: translateX(-100%);
+        transition: transform 400ms 100ms linear;
+    }
+
+    .header-store .list {
+        background: #fff;
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 100vw;
+        height: 50vh;
+        padding: 10px 0;
+        transform: translateX(100%);
+        transition: transform 300ms linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header-store .list.-active {
+        transform: translateX(0%);
+        transition: none;
+    }
+
+    .header-store .list.-active .item.-menu i {
+        transform: translateX(0%);
+        transition: none;
+    }
+
+    .header-store .list a {
+        color: #000;
+    }
+
+    .header-store .item {
+        display: block;
+        padding: 10px 0;
     }
 
 }

@@ -7,6 +7,8 @@
     transform: translateY(-50%) translateX(-50%);
     width: 90%;
     max-width: 1330px;
+    box-shadow: 0 0 60px rgba(44, 44, 44, .3);
+    z-index: 5;
 }
 
 @media (max-width: 1470px), (max-height: 960px)  {
