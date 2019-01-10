@@ -80,6 +80,7 @@
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 30px;
+    padding-right: 30px;
 }
 
 .description-product>.text.-more {
@@ -101,6 +102,10 @@
     .description-product>.title {
         font-size: 35px;
         text-align: center;
+    }
+
+    .description-product>.text {
+        padding-right: 0px;
     }
 
     .description-product>.item.-heart {
